@@ -1,0 +1,13 @@
+<h3>
+  Count Signal: <span>{{ count() }}</span>
+</h3>
+
+<button (click)="reset()">Resetar</button>
+<button (click)="add()">Adicione +1</button>
+<button (click)="multiplyByTwo()">Multiplique por 2</button>
+
+<div *ngIf="items | async as itemList">
+  <p *ngFor="let item of itemList; trackBy: trackItem">
+    {{ item }}
+  </p>
+</div>
